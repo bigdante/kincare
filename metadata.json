@@ -1,0 +1,6 @@
+{
+  "name": "Family Health Hub",
+  "description": "A dual-role family health management app with AI-powered timelines, medication tracking, and daily health interventions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #0D9488;
+  --primary-dark: #0F766E;
+  --primary-light: #CCFBF1;
+  --brand-emerald: #059669;
+  --surface: #FFFFFF;
+  --background: #F9FAFB;
+}
+
+/* 隐藏滚动条但保留滚动功能 */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* 长辈关爱大字模式 (Senior Mode PRD 3.8) */
+.elder-mode {
+  font-size: 110%;
+}
+
+.elder-mode button,
+.elder-mode .touch-target {
+  min-height: 48px;
+}
+
+.elder-mode .elder-text-scale {
+  font-size: 1.15em !important;
+  line-height: 1.6 !important;
+}
+
+.elder-mode .elder-btn-scale {
+  padding-top: 14px !important;
+  padding-bottom: 14px !important;
+  font-size: 1.1em !important;
+}
+
+/* 声波动画 */
+@keyframes soundwave {
+  0%, 100% { height: 4px; }
+  50% { height: 16px; }
+}
+
+.animate-soundwave-1 {
+  animation: soundwave 1s ease-in-out infinite 0.1s;
+}
+.animate-soundwave-2 {
+  animation: soundwave 0.8s ease-in-out infinite 0.3s;
+}
+.animate-soundwave-3 {
+  animation: soundwave 1.2s ease-in-out infinite 0.2s;
+}
+.animate-soundwave-4 {
+  animation: soundwave 0.9s ease-in-out infinite 0.4s;
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  50% { transform: scale(1.15); opacity: 0.4; }
+  100% { transform: scale(0.95); opacity: 0.8; }
+}
+
+.animate-pulse-ring {
+  animation: pulse-ring 2s infinite ease-in-out;
+}
+
+@media print {
+  body {
+    background: white;
+  }
+  nav, header button, .no-print {
+    display: none !important;
+  }
+  main {
+    overflow: visible !important;
+    height: auto !important;
+    padding-bottom: 0 !important;
+  }
+  .max-w-md {
+    max-width: 100% !important;
+    box-shadow: none !important;
+    height: auto !important;
+  }
+}
